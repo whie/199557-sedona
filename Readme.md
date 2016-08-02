@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Валерий Дубовской](https://up.htmlacademy.ru/htmlcss/14/user/199557).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Шефер](https://htmlacademy.ru/profile/shefer ).
 
 ---
 
