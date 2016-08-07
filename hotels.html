@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Выбор гостиницы в Седоне</title>
+	</head>
+	<body>
+		<div class="content">
+			<header class="main-header">
+					<nav class="main-navigation">
+						<ul>
+							<li>
+								<a href="#">Информация</a>
+							</li>
+							<li>
+								<a href="#">Фото и видео</a>
+							</li>
+							<li>
+								<a href="#">Логотип</a>
+							</li>
+							<li>
+								<a href="#">Карта штата</a>
+							</li>
+							<li>
+								<a href="#">Гостиницы</a>
+							</li>
+						</ul>
+					</nav>
+			</header>
+			<main class="container">
+				<section class="form">
+					<form action="#" method="post">
+						<div class="infrastructure">
+							<h2>Инфраструктура:</h2>
+							<input id="pool" type="checkbox" name="pool" checked>
+							<label for="pool">Бассейн</label>
+							<input id="parking" type="checkbox" name="parking">
+							<label for="parking">Парковка</label>
+							<input id="wi-fi" type="checkbox" name="wi-fi">
+							<label for="wi-fi">Wi-Fi</label>
+						</div>
+						<div class="housing">
+							<h2>Тип жилья:</h2>
+							<input id="hotel" type="checkbox" name="hotel" checked>
+							<label for="hotel">Гостиница</label>
+							<input id="motel" type="checkbox" name="motel" checked>
+							<label for="motel">Мотель</label>
+							<input id="apartments" type="checkbox" name="apartments" checked>
+							<label for="apartments">Апартаменты</label>
+						</div>
+						<div class="price">
+							<h2>Стоимость в сутки (р):</h2>
+							<div class="selecting-price">
+								<p>От 0</p>
+								<p>До 3 000</p>
+							</div>
+							<input type="range" name="range" min="0" max="3000" step="100">
+						</div>
+						<button type="submit">Показать</button>
+					</form>
+				</section>
+				<section class="found">
+					<p class="found-number">Найдено: 3</p>
+					<p>Сортировка:</p>
+					<ul>
+						<li>
+							<a href="#">По цене</a>
+						</li>
+						<li>
+							<a href="#">По типу</a>
+						</li>
+						<li>
+							<a href="#">По рейтингу</a>
+						</li>
+					</ul>
+					<div class="sorting-img">
+						<a href="#">
+							<img src="img/10x10" alt="Сотрировка по возрастанию" width="10" height="10">
+						</a>
+						<a href="#">
+							<img src="img/10x10" alt="Сортировка поубыванию" width="10" height="10">
+						</a>
+					</div>
+				</section>
+				<article class="booking">
+					<div class="booking-hotel">
+						<img src="img/133x88" alt="Amara Resort & Spa" width="133" height="88">
+						<h3>Amara Resort & Spa</h3>
+						<p>Гостиница</p>
+						<p>От 3 500 р.</p>
+						<a href="#">Подробнее</a>
+						<a href="#">Забронировать</a>
+					</div>
+					<div class="rating">
+						<img src="img/16x16" alt="Звезда" width="16" height="16">
+						<img src="img/16x16" alt="Звезда" width="16" height="16">
+						<img src="img/16x16" alt="Звезда" width="16" height="16">
+						<img src="img/16x16" alt="Звезда" width="16" height="16">
+						<p>Рейтинг: 8,5</p>
+					</div>
+				</article>
+				
+				<article class="booking">
+					<figure>
+						<img src="img/133x88" alt="Desert Quail Inn" width="133" height="88">
+						<figcaption>Desert Quail Inn</figcaption>
+						<p>Мотель</p>
+						<p>От 2 000 р.</p>
+						<a href="#">Подробнее</a>
+						<a href="#">Забронировать</a>
+					</figure>
+					<div class="rating">
+						<img src="img/16x16" alt="Звезда" width="16" height="16">
+						<img src="img/16x16" alt="Звезда" width="16" height="16">
+						<p>Рейтинг: 8,9</p>
+					</div>
+				</article>
+				<article class="booking">
+					<figure>
+						<img src="img/133x88" alt="Villas at Poco Diablo" width="133" height="88">
+						<figcaption>Villas at Poco Diablo</figcaption>
+						<p>Апартаменты</p>
+						<p>От 4 000 р.</p>
+						<a href="#">Подробнее</a>
+						<a href="#">Забронировать</a>
+					</figure>
+					<div class="rating">
+						<img src="img/16x16" alt="Звезда" width="16" height="16">
+						<img src="img/16x16" alt="Звезда" width="16" height="16">
+						<img src="img/16x16" alt="Звезда" width="16" height="16">
+						<p>Рейтинг: 9,2</p>
+					</div>
+				</article>
+			</main>
+		</div>
+		<footer class="main-footer">
+			<section class="visit">
+				<p>#VisitSedona</p>
+			</section>
+			<section class="footer-social">
+				<a class="social-btn social-btn-tw" href="#">Twitter</a>
+				<a class="social-btn social-btn-fb" href="#">Facebook</a>
+				<a class="social-btn social-btn-yt" href="#">YouTube</a>
+			</section>
+			<section class="footer-copyright">
+				<p>Website by</p>
+				<a class="btn" href="https://htmlacademy.ru">
+					<img src="img/115x40" alt="HTML Academy" width="115" height="40">
+				</a>
+			</section>
+		</footer>
+	</body>
+</html>
