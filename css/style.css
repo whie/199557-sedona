@@ -83,7 +83,6 @@ display: flex;
 justify-content: center;
 }
 .form form {
-  outline: 1px solid red;
   display: flex;
   justify-content:space-between;
 }
