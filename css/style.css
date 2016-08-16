@@ -1,3 +1,7 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
 body {
   font-size: 14px;
   line-height: 21px;
@@ -16,4 +20,103 @@ h3 {
   font-size: 21px;
   line-height: 21px;
   color: #000000;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.content, .main-footer {
+  margin: 0 auto;
+  padding: 0 6%;
+  width: 1200px;
+}
+.main-navigation ul {
+  margin-top: 20px;
+  padding: 0 72px;
+  display: flex;
+  justify-content: space-between;
+}
+.container {
+  display: flex;
+  flex-direction:column;
+  padding: 0 6%;
+}
+.sedona {
+  margin: 0 auto;
+  width: 560px;
+}
+.benefits {
+  display: flex;
+  margin-top: 55px;
+}
+.benefits-text {
+  width: 400px;
+  padding: 0 45px;
+  margin: 0 auto;
+  flex-grow: 1;
+  text-align: center;
+}
+.benefits img {
+  flex-grow: 2;
+}
+.interested {
+  display: flex;
+  margin-top: 50px;
+  flex-direction:column;
+  text-align: center;
+}
+.main-footer {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  padding: 0 6%;
+}
+.main-footer section {
+  text-align: center;
+  width: 400px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.footer-copyright {
+display: flex;
+justify-content: center;
+}
+.form form {
+  outline: 1px solid red;
+  display: flex;
+  justify-content:space-between;
+}
+.housing {
+  flex-grow: 2;
+  padding-left: 10px;
+}
+.found {
+  display: flex;
+  justify-content:space-between;
+  margin-top: 25px;
+}
+.found-column-left {
+  display: flex;
+}
+.found-column-left ul {
+  display: flex;
+}
+.card-hotel {
+  float: left;
+  width: 500px;
+}
+.card-hotel img {
+  float: left;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+.detail-description, .price-booking {
+  float: left;
+  margin-right: 5px;
+}
+.rating {
+  float: right;
+  width: 110px;
+  text-align: right;
 }
