@@ -1,15 +1,19 @@
 html, body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 body {
+  max-width: 1200px;
+  width: 100%;
+  min-width: 768px;
   font-size: 14px;
   line-height: 21px;
   color: #333333;
   font-family: 'PT Sans',sans-serif;
 }
-h1 {
-  display: none;
+h1, .welcome, .because {
+  margin: 0;
+  font-size: 0;
 }
 h2 {
   font-size: 21px;
@@ -21,56 +25,99 @@ h3 {
   line-height: 21px;
   color: #000000;
 }
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.content, .main-footer {
+.content {
   margin: 0 auto;
-  padding: 0 6%;
-  width: 1200px;
+}
+.main-header, .form, .found, .card-description {
+  padding:  0 6%;
 }
 .main-navigation ul {
-  margin-top: 20px;
-  padding: 0 72px;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: space-between;
+  list-style: none;
+  text-align: center;
+  font-size: 0;
+}
+.main-navigation li {
+  width: 20%;
+  padding: 20px 0;
+  font-size: 14px;
+  line-height: 21px;
+}
+.main-navigation a {
+  display: inline-block;
+}
+li.logo {
+  padding: 0;
+  margin: 0;
+  height: 58px;
+  z-index: 1000;
 }
 .container {
   display: flex;
-  flex-direction:column;
-  padding: 0 6%;
+  flex-direction: column;
 }
 .sedona {
+  background: url("../img/white-mask.png") 50% 100% no-repeat,
+              url("../img/mountain-bg.jpg") no-repeat;
+  height: 510px;
+  text-align: center;
+}
+.welcome {
+  background: url("../img/welcome.png") 50% 0 no-repeat;
+  height: 86px;
+  margin: 76px 0 0 0;
+}
+.header-sedona {
+  background: url("../img/sedona.png") 50% 0 no-repeat;
+  height: 78px;
+  margin: 52px 0 0 0;
+}
+.because {
+  background: url("../img/because.png") 50% 0 no-repeat;
+  height: 80px;
+  margin: 58px 0 0 0;
+}
+.sedona-town {
   margin: 0 auto;
-  width: 560px;
+  width: 450px;
+  text-align: center;
+  padding-top: 40px;
 }
 .benefits {
   display: flex;
-  margin-top: 55px;
+  padding-top: 55px;
 }
 .benefits-text {
-  width: 400px;
+  width: 33%;
   padding: 0 45px;
   margin: 0 auto;
   flex-grow: 1;
   text-align: center;
+  box-sizing: border-box;
 }
-.benefits img {
-  flex-grow: 2;
+.benefits:nth-of-type(2n+1) img {
+  width: 66%;
 }
 .interested {
   display: flex;
   margin-top: 50px;
-  flex-direction:column;
+  flex-direction: column;
   text-align: center;
 }
 .main-footer {
   display: flex;
-  justify-content: center;
-  align-items:center;
-  padding: 0 6%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  min-height: 122px;
+  background-color: rgba(255,255,255,0.7);
+}
+.index-footer {
+  position: relative;
+  margin-top: -122px;
 }
 .main-footer section {
   text-align: center;
@@ -82,17 +129,25 @@ h3 {
 display: flex;
 justify-content: center;
 }
+.footer-copyright p {
+  margin-right: 15px;
+}
+.form {
+  background: url("../img/degradation-bg.jpg") no-repeat;
+  height: 217px;
+}
 .form form {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
+.
 .housing {
   flex-grow: 2;
   padding-left: 10px;
 }
 .found {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   margin-top: 25px;
 }
 .found-column-left {
@@ -100,22 +155,47 @@ justify-content: center;
 }
 .found-column-left ul {
   display: flex;
+  padding: 0;
+  list-style: none;
+}
+.found-column-left li {
+ margin-right: 32px;
+}
+.found-number {
+  margin-right: 50px;
+}
+.sorting {
+  margin-right: 38px;
+}
+.sorting-img {
+  margin-top: 12px;
+}
+.card-description {
+  display: flex;
+  justify-content: space-between;
 }
 .card-hotel {
-  float: left;
-  width: 500px;
+  display: flex;
 }
-.card-hotel img {
-  float: left;
-  margin-right: 30px;
-  margin-top: 30px;
+.desc-top {
+  padding-top: 8px;
+}
+.desc-bottom {
+  display: flex;
 }
 .detail-description, .price-booking {
-  float: left;
   margin-right: 5px;
 }
 .rating {
-  float: right;
-  width: 110px;
+  padding-top: 30px;
+}
+.card-hotel img {
+  margin-right: 30px;
+  margin-top: 30px;
+}
+.rating {
   text-align: right;
+}
+.rating p {
+  padding-right: 12px;
 }
