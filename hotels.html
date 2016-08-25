@@ -34,34 +34,46 @@
 			</header>
 			<main class="container">
 				<section class="form-hotels">
-					<form action="#" method="post">
+					<form class="selection-hotels" action="#" method="post">
 						<div class="infrastructure">
 							<h2>Инфраструктура:</h2>
-							<input id="pool" type="checkbox" name="pool" checked>
-							<label for="pool">Бассейн</label>
-							<input id="parking" type="checkbox" name="parking">
-							<label for="parking">Парковка</label>
-							<input id="wi-fi" type="checkbox" name="wi-fi">
-							<label for="wi-fi">Wi-Fi</label>
+							<div class="pool">
+								<input id="pool" type="checkbox" name="pool" checked>
+								<label for="pool">Бассейн</label>
+							</div>
+							<div class="parking">
+								<input id="parking" type="checkbox" name="parking">
+								<label for="parking">Парковка</label>
+							</div>
+							<div class="wi-fi">
+								<input id="wi-fi" type="checkbox" name="wi-fi">
+								<label for="wi-fi">Wi-Fi</label>
+							</div>
 						</div>
 						<div class="housing">
 							<h2>Тип жилья:</h2>
-							<input id="hotel" type="checkbox" name="hotel" checked>
-							<label for="hotel">Гостиница</label>
-							<input id="motel" type="checkbox" name="motel" checked>
-							<label for="motel">Мотель</label>
-							<input id="apartments" type="checkbox" name="apartments" checked>
-							<label for="apartments">Апартаменты</label>
+							<div class="hotel">
+								<input id="hotel" type="checkbox" name="hotel" checked>
+								<label for="hotel">Гостиница</label>
+							</div>
+							<div class="motel">
+								<input id="motel" type="checkbox" name="motel" checked>
+								<label for="motel">Мотель</label>
+							</div>
+							<div class="apartments">
+								<input id="apartments" type="checkbox" name="apartments" checked>
+								<label for="apartments">Апартаменты</label>
+							</div>
 						</div>
 						<div class="price">
 							<h2>Стоимость в сутки (р):</h2>
 							<div class="selecting-price">
-								<p>От 0</p>
-								<p>До 3 000</p>
+								<label class="min-price">от <input type="text" name="min-price" value="0"></label>
+								<label class="max-price">до <input type="text" name="max-price" value="3000"></label>
 							</div>
 							<input type="range" name="range" min="0" max="3000" step="100">
+							<input type="submit" value="Показать">
 						</div>
-						<input type="submit" value="Показать">
 					</form>
 				</section>
 				<section class="found">
@@ -173,9 +185,8 @@
 				<a class="social-btn social-btn-yt" href="#">YouTube</a>
 			</section>
 			<section class="footer-copyright">
-				<p>Website by</p>
 				<a class="btn" href="https://htmlacademy.ru">
-					<img src="img/html-academy.png" width="113" height="39" alt="HTML Academy">
+					<p>Website by</p>
 				</a>
 			</section>
 		</footer>

@@ -101,9 +101,17 @@
 						<label for="date-departure">Дата выезда:</label>
 						<input id="date-departure" type="text" name="date-departure" value="24 июля 2016">
 						<label for="number-adult">Взрослые:</label>
-						<input id="number-adult" type="number" name="number-adult" value="2">
+						<div class="count-of-people">
+							<span class="number-minus"></span>
+							<input id="number-adult" type="number" name="number-adult" value="2">
+							<span class="number-plus"></span>
+						</div>
 						<label for="number-children">Дети:</label>
-						<input id="number-children" type="number" name="number-children" value="0">
+						<div class="count-of-people">
+							<span class="number-minus"></span>
+							<input id="number-children" type="number" name="number-children" value="0">
+							<span class="number-plus"></span>
+						</div>
 						<input type="submit" value="Найти">
 					</form>
 				</section>
