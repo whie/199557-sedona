@@ -2,6 +2,8 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<title>HTML Academy: Седона</title>
 		</head>
@@ -18,7 +20,7 @@
 							</li>
 							<li class="logo">
 								<a href="index.html">
-									<img src="img/trigon-logo.png" width="145" height="75" alt="Логотип">
+									<img src="img/trigon-logo.png" width="138" height="70" alt="Логотип">
 								</a>
 							</li>
 							<li>
@@ -46,32 +48,29 @@
 						<span class="number">№1</span>
 						<p>Седона - не аттракион для туристов, там течет своя жизнь</p>
 					</div>
-					<img src="img/real-city.jpg" width="800" height="256" alt="Настоящий городок">
+					<div class="big-photo real-city"></div>
 				</section>
 				<section class="benefits">
-					<div class="benefits-text">
-						<img src="img/house.png" width="75" height="72" alt="Жилье">
+					<div class="benefits-text house">
 						<h3>Жилье</h3>
 						<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 					</div>
-					<div class="benefits-text">
-						<img src="img/food.png" width="74" height="70" alt="Еда">
+					<div class="benefits-text food">
 						<h3>Еда</h3>
 						<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
 					</div>
-					<div class="benefits-text">
-						<img src="img/souvenir.png" width="64" height="76" alt="Сувенир">
+					<div class="benefits-text souvenir">
 						<h3>Сувениры</h3>
 						<p>Не только китайского, но и местного производства!</p>
 					</div>
 				</section>
 				<section class="benefits">
+					<div class="big-photo devil-bridge"></div>
 					<div class="benefits-text">
 						<h3>Там есть мост дьявола</h3>
 						<span class="number">№2</span>
 						<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 					</div>
-					<img src="img/devil-bridge.jpg" width="800" height="256" alt="Мост дьявола">
 				</section>
 				<section class="benefits">
 					<div class="benefits-text">
@@ -92,19 +91,27 @@
 				</section>
 				<section class="interested">
 					<h2>Заинтересовались?</h2>
-					<p>Укажите предполагаемые даты поездки<br>
+					<p>Укажите предполагаемые даты поездки,<br>
 						И мы покажем вам лучшие предложения гостиниц в Седоне
 					</p>
-					<form action="#" method="post">
-						<h3>Поиск гостиницы в Седоне</h3>
-						<label for="date-arrival">Дата заезда</label>
-						<input id="date-arrival" type="date" name="date-arrival">
-						<label for="date-departure">Дата выезда</label>
-						<input id="date-departure" type="date" name="date-departure">
-						<label for="number-adult">Взрослые</label>
-						<input id="number-adult" type="number" name="number-adult">
-						<label for="number-children">Дети</label>
-						<input id="number-children" type="number" name="number-children">
+					<h3 class="search-btn">Поиск гостиницы в Седоне</h3>
+					<form class="search" action="#" method="post">
+						<label for="date-arrival">Дата заезда:</label>
+						<input id="date-arrival" type="text" name="date-arrival" value="24 апреля 2016">
+						<label for="date-departure">Дата выезда:</label>
+						<input id="date-departure" type="text" name="date-departure" value="24 июля 2016">
+						<label for="number-adult">Взрослые:</label>
+						<div class="count-of-people">
+							<span class="number-minus qty-number"></span>
+							<input id="number-adult" type="number" name="number-adult" value="2">
+							<span class="number-plus qty-number"></span>
+						</div>
+						<label for="number-children">Дети:</label>
+						<div class="count-of-people">
+							<span class="number-minus qty-number"></span>
+							<input id="number-children" type="number" name="number-children" value="0">
+							<span class="number-plus qty-number"></span>
+						</div>
 						<input type="submit" value="Найти">
 					</form>
 				</section>
@@ -121,9 +128,8 @@
 				<a class="social-btn social-btn-yt" href="#">YouTube</a>
 			</section>
 			<section class="footer-copyright">
-				<p>Website by</p>
 				<a class="btn" href="https://htmlacademy.ru">
-					<img src="img/html-academy.png" width="113" height="39" alt="HTML Academy">
+					<p>Website by</p>
 				</a>
 			</section>
 		</footer>
