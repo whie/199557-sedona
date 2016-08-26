@@ -20,7 +20,6 @@ body {
   color: #333333;
   font-family: 'PT Sans', Aril, sans-serif;
   background-color: #f2f2f2;
-  padding-bottom: 50px;
 }
 h1, .welcome, .because {
   margin: 0;
@@ -40,7 +39,7 @@ h3 {
 }
 .content {
   margin: 0 auto;
-  /* box-shadow: 0 0 10px 0 #000000; */
+  box-shadow: 0 0 10px 0 #000000;
 }
 .main-header, .form, .found, .card-description {
   padding:  0 6%;
@@ -291,53 +290,36 @@ li.logo {
 .search .count-of-people {
   position: relative;
 }
-.number-minus {
+.qty-number {
   position: absolute;
-  top: 0px;
-  left: 2px;
-  height: 38px;
-  width: 30px;
+  top: 13px;
+  height: 12px;
+  width: 12px;
+  cursor: pointer;
+
+  background: url("../img/sprite-qty-btn.png") center no-repeat;
+}
+.number-minus {
+  left: 14px;
+  background-position: 50% -21px;
+}
+.number-minus:hover {
+  background-position: 50% -55px;
+}
+.number-minus:active {
+  background-position: 50% -89px;
 }
 .number-plus {
-  position: absolute;
-  top: 0;
-  right: 4px;
-  height: 38px;
-  width: 30px;
+  right: 14px;
+  background-position: 50% -4px;
 }
-.number-minus::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -2px;
-  height: 3px;
-  width: 12px;
-  background: #a9a9a9;
+.number-plus:hover {
+  right: 14px;
+  background-position: 50% -38px;
 }
-.number-plus::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  margin-top: -2px;
-  height: 3px;
-  width: 12px;
-  background-color: #a9a9a9;
-}
-.number-plus::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  margin-top: -2px;
-  height: 3px;
-  width: 12px;
-  background-color: #a9a9a9;
-  transform: rotate(90deg);
-}
-.number-minus:hover ~ .number-minus::after {
-  background-color: #000000;
+.number-plus:active {
+  right: 14px;
+  background-position: 50% -72px;
 }
 .search input[type="submit"] {
   border: none;
