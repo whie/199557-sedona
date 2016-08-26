@@ -20,7 +20,7 @@
 						</li>
 						<li class="logo">
 							<a href="index.html">
-								<img src="img/trigon-logo.png" width="145" height="75" alt="Логотип">
+								<img src="img/trigon-logo.png" width="138" height="70" alt="Логотип">
 							</a>
 						</li>
 						<li>
@@ -71,7 +71,13 @@
 								<label class="min-price">от <input type="text" name="min-price" value="0"></label>
 								<label class="max-price">до <input type="text" name="max-price" value="3000"></label>
 							</div>
-							<input type="range" name="range" min="0" max="3000" step="100">
+							<div class="range-controls">
+								<div class="scale">
+									<div class="bar"></div>
+								</div>
+								<div class="range-toggle range-toggle-min"></div>
+								<div class="range-toggle range-toggle-max"></div>
+							</div>
 							<input type="submit" value="Показать">
 						</div>
 					</form>
@@ -80,9 +86,9 @@
 					<div class="found-column-left">
 						<p class="found-number">Найдено: 3</p>
 						<p class="sorting">Сортировка:</p>
-						<ul>
+						<ul class="menu-sort">
 							<li>
-								<a href="#">По цене</a>
+								<a href="#" class="active-point">По цене</a>
 							</li>
 							<li>
 								<a href="#">По типу</a>
@@ -92,13 +98,9 @@
 							</li>
 						</ul>
 					</div>
-					<div class="sorting-img">
-						<a href="#">
-							<img src="img/sorting-increase.png" alt="Сотрировка по возрастанию" width="11" height="10">
-						</a>
-						<a href="#">
-							<img src="img/sorting-decrease.png" alt="Сортировка поубыванию" width="11" height="10">
-						</a>
+					<div class="sorting-arrow">
+						<a href="#" class="sorting-increase">Сортировка по возрастанию</a>
+						<a href="#" class="sorting-decrease arrow-active">Сортировка поубыванию</a>
 					</div>
 				</section>
 				<article class="card-description">
@@ -109,20 +111,17 @@
 							<div class="desc-bottom">
 								<div class="detail-description">
 									<p>Гостиница</p>
-									<a href="#">Подробнее</a>
+									<a href="#" class="blue-btn btn">Подробнее</a>
 								</div>
 								<div class="price-booking">
 									<p>От 3 500 р.</p>
-									<a href="#">Забронировать</a>
+									<a href="#" class="brown-btn btn">Забронировать</a>
 							</div>
 						</div>
 					</div>
 					</div>
 					<div class="rating">
-						<img src="img/star.png" alt="Звезда" width="18" height="17">
-						<img src="img/star.png" alt="Звезда" width="18" height="17">
-						<img src="img/star.png" alt="Звезда" width="18" height="17">
-						<img src="img/star.png" alt="Звезда" width="18" height="17">
+						<div class="rating-star four-star"></div>
 						<p>Рейтинг: 8,5</p>
 					</div>
 				</article>
@@ -134,18 +133,17 @@
 							<div class="desc-bottom">
 								<div class="detail-description">
 									<p>Мотель</p>
-									<a href="#">Подробнее</a>
+									<a href="#" class="blue-btn btn">Подробнее</a>
 								</div>
 								<div class="price-booking">
 									<p>От 2 000 р.</p>
-									<a href="#">Забронировать</a>
+									<a href="#" class="brown-btn btn">Забронировать</a>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="rating">
-						<img src="img/star.png" alt="Звезда" width="18" height="17">
-						<img src="img/star.png" alt="Звезда" width="18" height="17">
+						<div class="rating-star two-star"></div>
 						<p>Рейтинг: 8,9</p>
 					</div>
 				</article>
@@ -157,19 +155,17 @@
 							<div class="desc-bottom">
 								<div class="detail-description">
 									<p>Апартаменты</p>
-									<a href="#">Подробнее</a>
+									<a href="#" class="blue-btn btn">Подробнее</a>
 								</div>
 								<div class="price-booking">
 									<p>От 4 000 р.</p>
-									<a href="#">Забронировать</a>
+									<a href="#" class="brown-btn btn">Забронировать</a>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="rating">
-						<img src="img/star.png" alt="Звезда" width="18" height="17">
-						<img src="img/star.png" alt="Звезда" width="18" height="17">
-						<img src="img/star.png" alt="Звезда" width="18" height="17">
+						<div class="rating-star three-star"></div>
 						<p>Рейтинг: 9,2</p>
 					</div>
 				</article>
