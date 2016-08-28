@@ -48,6 +48,7 @@ h3 {
   background-color: #ffffff;
 }
 .main-navigation ul {
+  position: relative;
   margin: 0;
   padding: 0;
   display: flex;
@@ -57,7 +58,7 @@ h3 {
 }
 .main-navigation li {
   width: 20%;
-  padding: 12px 0;
+  padding: 15px 0;
   font-size: 14px;
   line-height: 26px;
 }
@@ -91,11 +92,14 @@ h3 {
   opacity: 0.3;
 }
 li.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
   padding: 0;
-  margin: 0;
-  height: 56px;
+  margin-left: -69px;
+  width: 138px;
+  height: 70px;
   text-align: center;
-  z-index: 1000;
 }
 .container {
   display: flex;
