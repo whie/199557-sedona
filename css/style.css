@@ -100,6 +100,7 @@ li.logo {
   width: 138px;
   height: 70px;
   text-align: center;
+  z-index: 1000;
 }
 .container {
   display: flex;
@@ -263,6 +264,7 @@ li.logo {
   text-align: left;
   box-sizing: border-box;
   box-shadow: 0 4px 10px 0 #777777;
+  z-index: 1000;
 }
 .search label {
   line-height: 40px;
