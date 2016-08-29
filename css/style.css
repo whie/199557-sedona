@@ -113,7 +113,7 @@ li.logo {
   position: relative;
   padding-top: 76px;
   padding-bottom: 80px;
-  background: #cccccc url("../img/mountain-bg.jpg") 0 28% no-repeat;
+  background: #ccc url("../img/mountain-bg.jpg") 0 28% no-repeat;
   background-size: 100% auto;
   text-align: center;
 }
@@ -374,6 +374,11 @@ li.logo {
   border: none;
   background-color: #5496bd;
   color: rgba(0,0,0,0.3);
+}
+.maps {
+  width: 100%;
+  height: 593px;
+  background: #eee url("../img/map.jpg");
 }
 .main-footer {
   display: flex;
