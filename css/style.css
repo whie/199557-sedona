@@ -11,6 +11,7 @@ input[type='number'] {
     -moz-appearance: textfield;
 }
 body {
+  position: relative;
   max-width: 1200px;
   width: 100%;
   min-width: 768px;
@@ -39,7 +40,7 @@ h3 {
 }
 .content {
   margin: 0 auto;
-  box-shadow: 0 0 10px 0 #000000;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.6);
 }
 .main-header, .form, .found, .card-description {
   padding:  0 6%;
@@ -263,7 +264,7 @@ li.logo {
   font-weight: bold;
   text-align: left;
   box-sizing: border-box;
-  box-shadow: 0 4px 10px 0 #777777;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.6);
   z-index: 1000;
 }
 .search label {
@@ -363,18 +364,20 @@ li.logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 0;
+  height: 120px;
   background-color: rgba(255,255,255,0.7);
 }
 .index-footer {
-  position: relative;
-  margin-top: -119px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .main-footer section {
   text-align: center;
-  width: 400px;
-  margin-top: 22px;
-  margin-bottom: 29px;
+  flex-basis: 33.3%;
+
 }
 .visit p {
   font-size: 21px;
@@ -384,8 +387,8 @@ li.logo {
 .social-btn {
   font-size: 0;
   display: inline-block;
-  width: 47px;
-  height: 46px;
+  width: 46px;
+  height: 48px;
   background: #81b3d2 url("../img/sprite-soc.png")  no-repeat;
 }
 .social-btn:hover {
@@ -395,22 +398,22 @@ li.logo {
   background-color: #5496bd;
 }
 .social-btn-tw {
-  background-position: -5px -178px;
+  background-position: -6px -178px;
 }
 .social-btn-tw:active {
-  background-position: -5px -123px;
+  background-position: -6px -123px;
 }
 .social-btn-fb {
-  background-position: -3px -67px;
+  background-position: -2px -67px;
 }
 .social-btn-fb:active {
-  background-position: -3px -8px;
+  background-position: -2px -8px;
 }
 .social-btn-yt {
-  background-position: -7px -233px;
+  background-position: -8px -233px;
 }
 .social-btn-yt:active {
-  background-position: -7px -289px;
+  background-position: -8px -289px;
 }
 .footer-copyright {
 display: flex;
@@ -433,7 +436,7 @@ justify-content: center;
 }
 .form-hotels {
   padding: 0 6%;
-  background: url("../img/degradation-bg.jpg") no-repeat;
+  background: #cccccc url("../img/degradation-bg.jpg") no-repeat;
   color: #ffffff;
 }
 .form-hotels form {
@@ -694,6 +697,7 @@ a.arrow-active {
 }
 .desc-bottom p {
   margin-top: 8px;
+  margin-bottom: 13px;
 }
 .desc-bottom .btn {
   box-sizing: border-box;
@@ -747,6 +751,7 @@ a.arrow-active {
   background-position: 25px 0;
 }
 .rating p {
+  margin-top: 15px;
   margin-bottom: 0;
   padding: 4px 12px 3px 16px;
   color: #666666;
