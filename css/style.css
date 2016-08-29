@@ -245,6 +245,7 @@ li.logo {
   line-height: 26px;
   color: #ffffff;
   background-color: #766357;
+  z-index: 1000;
 }
 .search-btn:hover {
   cursor: pointer;
@@ -266,11 +267,34 @@ li.logo {
   text-align: left;
   box-sizing: border-box;
   box-shadow: 0 0 15px 0 rgba(0,0,0,0.6);
-  z-index: 1000;
+  z-index: 100;
+}
+.selected-date {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .search label {
   line-height: 40px;
   height: 37px;
+}
+.calendar {
+  position: absolute;
+  top: 6px;
+  right: 9px;
+  content: "";
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/sprite-calendar.png");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+.calendar:hover {
+  background-position: 0px -47px;
+}
+.calendar:active {
+  background-position: 0px -91px;
 }
 .search input {
   box-sizing: border-box;
@@ -283,10 +307,7 @@ li.logo {
   text-transform: uppercase;
 }
 .search input[type="text"] {
-  padding: 0px 30px 0 15px;
-  background-image: url("../img/sprite-calendar.png");
-  background-position: 97.5% 5px;
-  background-repeat: no-repeat;
+  padding: 0px 35px 0 15px;
 }
 .search input[type="number"] {
   margin-left: 2px;
@@ -304,7 +325,6 @@ li.logo {
   height: 12px;
   width: 12px;
   cursor: pointer;
-
   background: url("../img/sprite-qty-btn.png") center no-repeat;
 }
 .number-minus {
@@ -346,12 +366,6 @@ li.logo {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
 }
-.search input[type="text"]:hover {
-  background-position: 97.5% -42px;
-}
-.search input[type="text"]:active {
-  background-position: 97.5% -86px;
-}
 .search input[type="submit"]:hover {
   border: none;
   background-color: #669ec0;
@@ -368,7 +382,7 @@ li.logo {
   width: 100%;
   padding: 0;
   height: 120px;
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255,255,255,0.9);
 }
 .index-footer {
   position: absolute;
@@ -656,10 +670,10 @@ a.sorting-decrease {
   background-position: -5px -5px;
 }
 a.sorting-decrease:hover {
-  background-position: -5px -25px;
+  background-position: -5px -45px;
 }
 a.sorting-decrease:active {
-  background-position: -5px -45px;
+  background-position: -5px -25px;
 }
 a.arrow-active {
   background-position: -5px -25px;
