@@ -11,6 +11,7 @@ input[type='number'] {
     -moz-appearance: textfield;
 }
 body {
+  position: relative;
   max-width: 1200px;
   width: 100%;
   min-width: 768px;
@@ -39,7 +40,7 @@ h3 {
 }
 .content {
   margin: 0 auto;
-  box-shadow: 0 0 10px 0 #000000;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.6);
 }
 .main-header, .form, .found, .card-description {
   padding:  0 6%;
@@ -48,6 +49,7 @@ h3 {
   background-color: #ffffff;
 }
 .main-navigation ul {
+  position: relative;
   margin: 0;
   padding: 0;
   display: flex;
@@ -56,8 +58,9 @@ h3 {
   font-size: 0;
 }
 .main-navigation li {
-  width: 20%;
-  padding: 12px 0;
+  flex-basis: 20%;
+  flex-grow: 1;
+  padding: 15px 0;
   font-size: 14px;
   line-height: 26px;
 }
@@ -91,9 +94,13 @@ h3 {
   opacity: 0.3;
 }
 li.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
   padding: 0;
-  margin: 0;
-  height: 56px;
+  margin-left: -69px;
+  width: 138px;
+  height: 70px;
   text-align: center;
   z-index: 1000;
 }
@@ -106,7 +113,7 @@ li.logo {
   position: relative;
   padding-top: 76px;
   padding-bottom: 80px;
-  background: #cccccc url("../img/mountain-bg.jpg") 0 28% no-repeat;
+  background: #ccc url("../img/mountain-bg.jpg") 0 28% no-repeat;
   background-size: 100% auto;
   text-align: center;
 }
@@ -238,6 +245,7 @@ li.logo {
   line-height: 26px;
   color: #ffffff;
   background-color: #766357;
+  z-index: 1000;
 }
 .search-btn:hover {
   cursor: pointer;
@@ -258,11 +266,35 @@ li.logo {
   font-weight: bold;
   text-align: left;
   box-sizing: border-box;
-  box-shadow: 0 4px 10px 0 #777777;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.6);
+  z-index: 100;
+}
+.selected-date {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .search label {
   line-height: 40px;
   height: 37px;
+}
+.calendar {
+  position: absolute;
+  top: 6px;
+  right: 9px;
+  content: "";
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/sprite-calendar.png");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+.calendar:hover {
+  background-position: 0px -47px;
+}
+.calendar:active {
+  background-position: 0px -91px;
 }
 .search input {
   box-sizing: border-box;
@@ -275,10 +307,7 @@ li.logo {
   text-transform: uppercase;
 }
 .search input[type="text"] {
-  padding: 0px 30px 0 15px;
-  background-image: url("../img/sprite-calendar.png");
-  background-position: 97.5% 5px;
-  background-repeat: no-repeat;
+  padding: 0px 35px 0 15px;
 }
 .search input[type="number"] {
   margin-left: 2px;
@@ -296,7 +325,6 @@ li.logo {
   height: 12px;
   width: 12px;
   cursor: pointer;
-
   background: url("../img/sprite-qty-btn.png") center no-repeat;
 }
 .number-minus {
@@ -338,12 +366,6 @@ li.logo {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
 }
-.search input[type="text"]:hover {
-  background-position: 97.5% -42px;
-}
-.search input[type="text"]:active {
-  background-position: 97.5% -86px;
-}
 .search input[type="submit"]:hover {
   border: none;
   background-color: #669ec0;
@@ -353,22 +375,29 @@ li.logo {
   background-color: #5496bd;
   color: rgba(0,0,0,0.3);
 }
+.maps {
+  width: 100%;
+  height: 593px;
+  background: #eee url("../img/map.jpg");
+}
 .main-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 0;
-  background-color: rgba(255,255,255,0.7);
+  height: 120px;
+  background-color: rgba(255,255,255,0.9);
 }
 .index-footer {
-  position: relative;
-  margin-top: -119px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .main-footer section {
   text-align: center;
-  width: 400px;
-  margin-top: 22px;
-  margin-bottom: 29px;
+  flex-basis: 33.3%;
+
 }
 .visit p {
   font-size: 21px;
@@ -378,8 +407,8 @@ li.logo {
 .social-btn {
   font-size: 0;
   display: inline-block;
-  width: 47px;
-  height: 46px;
+  width: 46px;
+  height: 48px;
   background: #81b3d2 url("../img/sprite-soc.png")  no-repeat;
 }
 .social-btn:hover {
@@ -389,22 +418,22 @@ li.logo {
   background-color: #5496bd;
 }
 .social-btn-tw {
-  background-position: -5px -178px;
+  background-position: -6px -178px;
 }
 .social-btn-tw:active {
-  background-position: -5px -123px;
+  background-position: -6px -123px;
 }
 .social-btn-fb {
-  background-position: -3px -67px;
+  background-position: -2px -67px;
 }
 .social-btn-fb:active {
-  background-position: -3px -8px;
+  background-position: -2px -8px;
 }
 .social-btn-yt {
-  background-position: -7px -233px;
+  background-position: -8px -233px;
 }
 .social-btn-yt:active {
-  background-position: -7px -289px;
+  background-position: -8px -289px;
 }
 .footer-copyright {
 display: flex;
@@ -427,7 +456,7 @@ justify-content: center;
 }
 .form-hotels {
   padding: 0 6%;
-  background: url("../img/degradation-bg.jpg") no-repeat;
+  background: #cccccc url("../img/degradation-bg.jpg") no-repeat;
   color: #ffffff;
 }
 .form-hotels form {
@@ -452,7 +481,7 @@ justify-content: center;
   flex-direction: column;
 }
 .infrastructure {
-  margin-right: 7%;
+  margin-right: 11%;
 }
 .infrastructure div,
 .housing div {
@@ -486,7 +515,6 @@ input[type="checkbox"]:checked + label::before {
 }
 .housing {
   flex-grow: 2;
-  padding-left: 10px;
 }
 .selecting-price {
   position: relative;
@@ -647,10 +675,10 @@ a.sorting-decrease {
   background-position: -5px -5px;
 }
 a.sorting-decrease:hover {
-  background-position: -5px -25px;
+  background-position: -5px -45px;
 }
 a.sorting-decrease:active {
-  background-position: -5px -45px;
+  background-position: -5px -25px;
 }
 a.arrow-active {
   background-position: -5px -25px;
@@ -688,6 +716,7 @@ a.arrow-active {
 }
 .desc-bottom p {
   margin-top: 8px;
+  margin-bottom: 13px;
 }
 .desc-bottom .btn {
   box-sizing: border-box;
@@ -741,6 +770,7 @@ a.arrow-active {
   background-position: 25px 0;
 }
 .rating p {
+  margin-top: 15px;
   margin-bottom: 0;
   padding: 4px 12px 3px 16px;
   color: #666666;

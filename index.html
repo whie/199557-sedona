@@ -96,10 +96,16 @@
 					</p>
 					<h3 class="search-btn">Поиск гостиницы в Седоне</h3>
 					<form class="search" action="#" method="post">
-						<label for="date-arrival">Дата заезда:</label>
-						<input id="date-arrival" type="text" name="date-arrival" value="24 апреля 2016">
-						<label for="date-departure">Дата выезда:</label>
-						<input id="date-departure" type="text" name="date-departure" value="24 июля 2016">
+						<div class="selected-date">
+							<label for="date-arrival">Дата заезда:</label>
+							<input id="date-arrival" type="text" name="date-arrival" value="24 апреля 2016">
+							<span class="calendar"></span>
+						</div>
+						<div class="selected-date">
+							<label for="date-departure">Дата выезда:</label>
+							<input id="date-departure" type="text" name="date-departure" value="24 июля 2016">
+							<span class="calendar"></span>
+						</div>
 						<label for="number-adult">Взрослые:</label>
 						<div class="count-of-people">
 							<span class="number-minus qty-number"></span>
@@ -115,7 +121,7 @@
 						<input type="submit" value="Найти">
 					</form>
 				</section>
-				<img src="img/map.jpg" min-width="768" min-height="593" alt="Карта">
+				<div class="maps" id="map"></div>
 			</main>
 		</div>
 		<footer class="main-footer index-footer">
@@ -133,5 +139,7 @@
 				</a>
 			</section>
 		</footer>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript" defer></script>
+		<script src="js/map.js" defer></script>
 	</body>
 </html>
