@@ -528,7 +528,7 @@ input[type="checkbox"] + label::before {
   left: 0;
   width: 24px;
   height: 22px;
-  background: url("../img/no-checked.png") no-repeat;
+  background: url("../img/sprite.png") -154px -148px no-repeat;
 }
 input[type="checkbox"]:checked + label::before {
   content: "";
@@ -537,7 +537,16 @@ input[type="checkbox"]:checked + label::before {
   left: 0;
   width: 24px;
   height: 22px;
-  background: url("../img/checked.png") no-repeat;
+  background-position: -154px -180px;
+}
+input[type="checkbox"]:disabled + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 22px;
+  background-position: -154px -211px;
 }
 .housing {
   flex-grow: 2;
@@ -686,28 +695,28 @@ input[type="checkbox"]:checked + label::before {
   height: 10px;
   width: 11px;
   text-decoration: none;
-  background: url("../img/sprite-arrow.png") no-repeat;
+  background: url("../img/sprite.png") no-repeat;
 }
 a.sorting-increase {
-  background-position: -5px -65px;
+  background-position: -132px -208px;
 }
 a.sorting-increase:hover {
-  background-position: -5px -105px;
+  background-position: -132px -248px;
 }
 a.sorting-increase:active {
-  background-position: -5px -85px;
+  background-position: -132px -228px;
 }
 a.sorting-decrease {
-  background-position: -5px -5px;
+  background-position: -132px -148px;
 }
 a.sorting-decrease:hover {
-  background-position: -5px -45px;
+  background-position: -132px -188px;
 }
 a.sorting-decrease:active {
-  background-position: -5px -25px;
+  background-position: -132px -168px;
 }
 a.arrow-active {
-  background-position: -5px -25px;
+  background-position: -132px -168px;
 }
 .card-description {
   display: flex;
@@ -783,17 +792,17 @@ a.arrow-active {
   display: inline-block;
   width: 90px;
   height: 17px;
-  background: url("../img/star.png") no-repeat;
+  background: url("../img/sprite.png") no-repeat;
   margin-bottom: 25px;
 }
 .rating-star.four-star {
-  background-position: 0 0;
+  background-position: -80px -266px;
 }
 .rating-star.two-star {
-  background-position: 48px 0;
+  background-position: -33px -266px;
 }
 .rating-star.three-star {
-  background-position: 25px 0;
+  background-position: -57px -266px;
 }
 .rating p {
   margin-top: 15px;
