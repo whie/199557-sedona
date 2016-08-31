@@ -166,6 +166,7 @@ li.logo {
   box-sizing: border-box;
 }
 .benefits-text h3 {
+  position: relative;
   max-width: 151px;
   margin-left: auto;
   margin-right: auto;
@@ -191,14 +192,29 @@ li.logo {
   background-color: #ffffff;
   padding-bottom: 68px;
 }
-.benefits .house {
-  background: url("../img/house.png") 50% 62px no-repeat;
+.benefits:nth-of-type(2) h3::before {
+  position: absolute;
+  content: "";
+  bottom: 52px;
+  background-image: url("../img/sprite.png");
 }
-.benefits .food {
-  background: url("../img/food.png") 50% 62px no-repeat;
+.house::before {
+  left: 37.5px;
+  width: 75px;
+  height: 72px;
+  background: -1px 0px no-repeat;
 }
-.benefits .souvenir {
-  background: url("../img/souvenir.png") 50% 58px no-repeat;
+.food::before {
+  left: 37px;
+  width: 74px;
+  height: 70px;
+  background: 0px -92px no-repeat;
+}
+.souvenir::before {
+  left: 45px;
+  width: 64px;
+  height: 76px;
+  background: -6px -182px no-repeat;
 }
 .benefits:nth-of-type(2n+1) {
   background-color: #81b3d2;
@@ -286,15 +302,15 @@ li.logo {
   content: "";
   width: 21px;
   height: 21px;
-  background-image: url("../img/sprite-calendar.png");
-  background-position: 0px 0px;
+  background-image: url("../img/sprite.png");
+  background-position: -81px -145px;
   background-repeat: no-repeat;
 }
 .calendar:hover {
-  background-position: 0px -47px;
+  background-position: -81px -192px;
 }
 .calendar:active {
-  background-position: 0px -91px;
+  background-position: -81px -236px;
 }
 .search input {
   box-sizing: border-box;
@@ -321,33 +337,32 @@ li.logo {
 }
 .qty-number {
   position: absolute;
-  top: 13px;
-  height: 12px;
-  width: 12px;
+  height: 11px;
+  width: 11px;
   cursor: pointer;
-  background: url("../img/sprite-qty-btn.png") center no-repeat;
+  background: url("../img/sprite.png") no-repeat;
 }
 .number-minus {
-  left: 14px;
-  background-position: 50% -21px;
+  top: 13px;
+  left: 15px;
+  background-position: -113px -165px;
 }
 .number-minus:hover {
-  background-position: 50% -55px;
+  background-position: -113px -199px;
 }
 .number-minus:active {
-  background-position: 50% -89px;
+  background-position: -113px -233px;
 }
 .number-plus {
+  top: 15px;
   right: 14px;
-  background-position: 50% -4px;
+  background-position: -113px -150px;
 }
 .number-plus:hover {
-  right: 14px;
-  background-position: 50% -38px;
+  background-position: -113px -184px;
 }
 .number-plus:active {
-  right: 14px;
-  background-position: 50% -72px;
+  background-position: -113px -218px;
 }
 .search input[type="submit"] {
   border: none;
@@ -409,7 +424,7 @@ li.logo {
   display: inline-block;
   width: 46px;
   height: 48px;
-  background: #81b3d2 url("../img/sprite-soc.png")  no-repeat;
+  background: #81b3d2 url("../img/sprite.png") no-repeat;
 }
 .social-btn:hover {
   background-color: #669ec0;
@@ -418,41 +433,52 @@ li.logo {
   background-color: #5496bd;
 }
 .social-btn-tw {
-  background-position: -6px -178px;
+  background-position: -205px -157px;
 }
 .social-btn-tw:active {
-  background-position: -6px -123px;
+  background-position: -205px -102px;
 }
 .social-btn-fb {
-  background-position: -2px -67px;
+  background-position: -200px -47px;
 }
 .social-btn-fb:active {
-  background-position: -2px -8px;
+  background-position: -200px 12px;
 }
 .social-btn-yt {
-  background-position: -8px -233px;
+  background-position: -206px -213px;
 }
 .social-btn-yt:active {
-  background-position: -8px -289px;
+  background-position: -206px -269px;
 }
 .footer-copyright {
 display: flex;
 justify-content: center;
 }
-.footer-copyright p {
-  padding-right: 121px;
-  line-height: 26px;
-}
-.footer-copyright a {
+.footer-copyright .btn {
   text-decoration: none;
   color: #000000;
-  background: url("../img/sprite-html-academy.png") 77px 5px no-repeat;
 }
-.footer-copyright a:hover {
-  background-position: 77px -44px;
+.html-academy {
+  line-height: 26px;
 }
-.footer-copyright a:active {
-  background-position: 77px -93px;
+.btn > .html-academy {
+  position: relative;
+  padding-right: 121px;
+}
+.btn > .html-academy::before {
+  position: absolute;
+  content: "";
+  bottom: -8px;
+  right: 0;
+  width: 113px;
+  height: 39px;
+  background: url("../img/sprite.png") -81px -5px no-repeat;
+}
+.btn:hover > .html-academy::before {
+  background-position: -81px -54px;
+}
+.btn:active > .html-academy::before {
+  background-position: -81px -103px;
 }
 .form-hotels {
   padding: 0 6%;
