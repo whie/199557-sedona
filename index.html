@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/style.min.css">
 		<title>HTML Academy: Седона</title>
 		</head>
 	<body>
@@ -51,16 +51,16 @@
 					<div class="big-photo real-city"></div>
 				</section>
 				<section class="benefits">
-					<div class="benefits-text house">
-						<h3>Жилье</h3>
+					<div class="benefits-text">
+						<h3 class="house">Жилье</h3>
 						<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 					</div>
-					<div class="benefits-text food">
-						<h3>Еда</h3>
+					<div class="benefits-text">
+						<h3 class="food">Еда</h3>
 						<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
 					</div>
-					<div class="benefits-text souvenir">
-						<h3>Сувениры</h3>
+					<div class="benefits-text">
+						<h3 class="souvenir">Сувениры</h3>
 						<p>Не только китайского, но и местного производства!</p>
 					</div>
 				</section>
@@ -90,32 +90,34 @@
 					</div>
 				</section>
 				<section class="interested">
-					<h2>Заинтересовались?</h2>
-					<p>Укажите предполагаемые даты поездки,<br>
-						И мы покажем вам лучшие предложения гостиниц в Седоне
-					</p>
-					<h3 class="search-btn">Поиск гостиницы в Седоне</h3>
+					<div class="wrapper">
+						<h2>Заинтересовались?</h2>
+						<p>Укажите предполагаемые даты поездки,<br>
+							И мы покажем вам лучшие предложения гостиниц в Седоне
+						</p>
+						<h3 class="search-btn">Поиск гостиницы в Седоне</h3>
+					</div>
 					<form class="search" action="#" method="post">
 						<div class="selected-date">
 							<label for="date-arrival">Дата заезда:</label>
-							<input id="date-arrival" type="text" name="date-arrival" value="24 апреля 2016">
+							<input id="date-arrival" type="text" name="date-arrival" value="24 апреля 2016" required>
 							<span class="calendar"></span>
 						</div>
 						<div class="selected-date">
 							<label for="date-departure">Дата выезда:</label>
-							<input id="date-departure" type="text" name="date-departure" value="24 июля 2016">
+							<input id="date-departure" type="text" name="date-departure" value="24 июля 2016" required>
 							<span class="calendar"></span>
 						</div>
 						<label for="number-adult">Взрослые:</label>
 						<div class="count-of-people">
 							<span class="number-minus qty-number"></span>
-							<input id="number-adult" type="number" name="number-adult" value="2">
+							<input id="number-adult" type="number" name="number-adult" value="2" required>
 							<span class="number-plus qty-number"></span>
 						</div>
 						<label for="number-children">Дети:</label>
 						<div class="count-of-people">
 							<span class="number-minus qty-number"></span>
-							<input id="number-children" type="number" name="number-children" value="0">
+							<input id="number-children" type="number" name="number-children" value="0" required>
 							<span class="number-plus qty-number"></span>
 						</div>
 						<input type="submit" value="Найти">
@@ -135,11 +137,11 @@
 			</section>
 			<section class="footer-copyright">
 				<a class="btn" href="https://htmlacademy.ru">
-					<p>Website by</p>
+					<p class="html-academy">Website by</p>
 				</a>
 			</section>
 		</footer>
 		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript" defer></script>
-		<script src="js/map.js" defer></script>
+		<script src="js/script.min.js" defer></script>
 	</body>
 </html>

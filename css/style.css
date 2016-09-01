@@ -102,7 +102,7 @@ li.logo {
   width: 138px;
   height: 70px;
   text-align: center;
-  z-index: 1000;
+  z-index: 10;
 }
 .container {
   display: flex;
@@ -156,6 +156,7 @@ li.logo {
 }
 .benefits {
   display: flex;
+  z-index: 100;
 }
 .benefits-text {
   width: 33%;
@@ -166,6 +167,7 @@ li.logo {
   box-sizing: border-box;
 }
 .benefits-text h3 {
+  position: relative;
   max-width: 151px;
   margin-left: auto;
   margin-right: auto;
@@ -191,14 +193,29 @@ li.logo {
   background-color: #ffffff;
   padding-bottom: 68px;
 }
-.benefits .house {
-  background: url("../img/house.png") 50% 62px no-repeat;
+.benefits:nth-of-type(2) h3::before {
+  position: absolute;
+  content: "";
+  bottom: 52px;
+  background-image: url("../img/sprite.png");
 }
-.benefits .food {
-  background: url("../img/food.png") 50% 62px no-repeat;
+.house::before {
+  left: 37.5px;
+  width: 75px;
+  height: 72px;
+  background: -1px 0px no-repeat;
 }
-.benefits .souvenir {
-  background: url("../img/souvenir.png") 50% 58px no-repeat;
+.food::before {
+  left: 37px;
+  width: 74px;
+  height: 70px;
+  background: 0px -92px no-repeat;
+}
+.souvenir::before {
+  left: 45px;
+  width: 64px;
+  height: 76px;
+  background: -6px -182px no-repeat;
 }
 .benefits:nth-of-type(2n+1) {
   background-color: #81b3d2;
@@ -224,11 +241,14 @@ li.logo {
 .interested {
   position: relative;
   display: flex;
-  padding-top: 25px;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+.interested .wrapper {
   background-color: #ffffff;
+  padding-top: 25px;
+  z-index: 100;
 }
 .interested  h2 {
   font-size: 30px;
@@ -245,7 +265,6 @@ li.logo {
   line-height: 26px;
   color: #ffffff;
   background-color: #766357;
-  z-index: 1000;
 }
 .search-btn:hover {
   cursor: pointer;
@@ -267,7 +286,7 @@ li.logo {
   text-align: left;
   box-sizing: border-box;
   box-shadow: 0 0 15px 0 rgba(0,0,0,0.6);
-  z-index: 100;
+  z-index: 10;
 }
 .selected-date {
   position: relative;
@@ -286,15 +305,15 @@ li.logo {
   content: "";
   width: 21px;
   height: 21px;
-  background-image: url("../img/sprite-calendar.png");
-  background-position: 0px 0px;
+  background-image: url("../img/sprite.png");
+  background-position: -81px -145px;
   background-repeat: no-repeat;
 }
 .calendar:hover {
-  background-position: 0px -47px;
+  background-position: -81px -192px;
 }
 .calendar:active {
-  background-position: 0px -91px;
+  background-position: -81px -236px;
 }
 .search input {
   box-sizing: border-box;
@@ -321,33 +340,32 @@ li.logo {
 }
 .qty-number {
   position: absolute;
-  top: 13px;
-  height: 12px;
-  width: 12px;
+  height: 11px;
+  width: 11px;
   cursor: pointer;
-  background: url("../img/sprite-qty-btn.png") center no-repeat;
+  background: url("../img/sprite.png") no-repeat;
 }
 .number-minus {
-  left: 14px;
-  background-position: 50% -21px;
+  top: 13px;
+  left: 15px;
+  background-position: -113px -165px;
 }
 .number-minus:hover {
-  background-position: 50% -55px;
+  background-position: -113px -199px;
 }
 .number-minus:active {
-  background-position: 50% -89px;
+  background-position: -113px -233px;
 }
 .number-plus {
+  top: 15px;
   right: 14px;
-  background-position: 50% -4px;
+  background-position: -113px -150px;
 }
 .number-plus:hover {
-  right: 14px;
-  background-position: 50% -38px;
+  background-position: -113px -184px;
 }
 .number-plus:active {
-  right: 14px;
-  background-position: 50% -72px;
+  background-position: -113px -218px;
 }
 .search input[type="submit"] {
   border: none;
@@ -409,7 +427,7 @@ li.logo {
   display: inline-block;
   width: 46px;
   height: 48px;
-  background: #81b3d2 url("../img/sprite-soc.png")  no-repeat;
+  background: #81b3d2 url("../img/sprite.png") no-repeat;
 }
 .social-btn:hover {
   background-color: #669ec0;
@@ -418,41 +436,52 @@ li.logo {
   background-color: #5496bd;
 }
 .social-btn-tw {
-  background-position: -6px -178px;
+  background-position: -205px -157px;
 }
 .social-btn-tw:active {
-  background-position: -6px -123px;
+  background-position: -205px -102px;
 }
 .social-btn-fb {
-  background-position: -2px -67px;
+  background-position: -200px -47px;
 }
 .social-btn-fb:active {
-  background-position: -2px -8px;
+  background-position: -200px 12px;
 }
 .social-btn-yt {
-  background-position: -8px -233px;
+  background-position: -206px -213px;
 }
 .social-btn-yt:active {
-  background-position: -8px -289px;
+  background-position: -206px -269px;
 }
 .footer-copyright {
 display: flex;
 justify-content: center;
 }
-.footer-copyright p {
-  padding-right: 121px;
-  line-height: 26px;
-}
-.footer-copyright a {
+.footer-copyright .btn {
   text-decoration: none;
   color: #000000;
-  background: url("../img/sprite-html-academy.png") 77px 5px no-repeat;
 }
-.footer-copyright a:hover {
-  background-position: 77px -44px;
+.html-academy {
+  line-height: 26px;
 }
-.footer-copyright a:active {
-  background-position: 77px -93px;
+.btn > .html-academy {
+  position: relative;
+  padding-right: 121px;
+}
+.btn > .html-academy::before {
+  position: absolute;
+  content: "";
+  bottom: -8px;
+  right: 0;
+  width: 113px;
+  height: 39px;
+  background: url("../img/sprite.png") -81px -5px no-repeat;
+}
+.btn:hover > .html-academy::before {
+  background-position: -81px -54px;
+}
+.btn:active > .html-academy::before {
+  background-position: -81px -103px;
 }
 .form-hotels {
   padding: 0 6%;
@@ -502,7 +531,7 @@ input[type="checkbox"] + label::before {
   left: 0;
   width: 24px;
   height: 22px;
-  background: url("../img/no-checked.png") no-repeat;
+  background: url("../img/sprite.png") -154px -148px no-repeat;
 }
 input[type="checkbox"]:checked + label::before {
   content: "";
@@ -511,7 +540,16 @@ input[type="checkbox"]:checked + label::before {
   left: 0;
   width: 24px;
   height: 22px;
-  background: url("../img/checked.png") no-repeat;
+  background-position: -154px -180px;
+}
+input[type="checkbox"]:disabled + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 22px;
+  background-position: -154px -211px;
 }
 .housing {
   flex-grow: 2;
@@ -660,28 +698,28 @@ input[type="checkbox"]:checked + label::before {
   height: 10px;
   width: 11px;
   text-decoration: none;
-  background: url("../img/sprite-arrow.png") no-repeat;
+  background: url("../img/sprite.png") no-repeat;
 }
 a.sorting-increase {
-  background-position: -5px -65px;
+  background-position: -132px -208px;
 }
 a.sorting-increase:hover {
-  background-position: -5px -105px;
+  background-position: -132px -248px;
 }
 a.sorting-increase:active {
-  background-position: -5px -85px;
+  background-position: -132px -228px;
 }
 a.sorting-decrease {
-  background-position: -5px -5px;
+  background-position: -132px -148px;
 }
 a.sorting-decrease:hover {
-  background-position: -5px -45px;
+  background-position: -132px -188px;
 }
 a.sorting-decrease:active {
-  background-position: -5px -25px;
+  background-position: -132px -168px;
 }
 a.arrow-active {
-  background-position: -5px -25px;
+  background-position: -132px -168px;
 }
 .card-description {
   display: flex;
@@ -757,17 +795,17 @@ a.arrow-active {
   display: inline-block;
   width: 90px;
   height: 17px;
-  background: url("../img/star.png") no-repeat;
+  background: url("../img/sprite.png") no-repeat;
   margin-bottom: 25px;
 }
 .rating-star.four-star {
-  background-position: 0 0;
+  background-position: -80px -266px;
 }
 .rating-star.two-star {
-  background-position: 48px 0;
+  background-position: -33px -266px;
 }
 .rating-star.three-star {
-  background-position: 25px 0;
+  background-position: -57px -266px;
 }
 .rating p {
   margin-top: 15px;
@@ -775,4 +813,23 @@ a.arrow-active {
   padding: 4px 12px 3px 16px;
   color: #666666;
   background-color: #f2f2f2;
+}
+/* Оживление формы */
+.hidden {
+  display: none;
+}
+@keyframes show {
+  0% {
+    transform: translateY(-366px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.search-show {
+  display: flex;
+  animation-name: show;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
