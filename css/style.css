@@ -435,11 +435,11 @@ li.logo {
   background-color: #81b3d2;
   height: 57px;
 }
-.search input:hover {
+.search input[type="text"]:hover {
   border: 2px solid #ebebeb;
   background-color: #ebebeb;
 }
-.search input:active {
+.search input[type="text"]:focus {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
 }
@@ -640,6 +640,16 @@ input[type="checkbox"]:disabled + label::before {
   left: 0;
   width: 24px;
   height: 22px;
+  background-position: -154px -237px;
+}
+input[type="checkbox"]:disabled:checked + label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -11px;
+  left: 0;
+  width: 24px;
+  height: 22px;
   background-position: -154px -211px;
 }
 .housing {
@@ -745,6 +755,10 @@ input[type="checkbox"]:disabled + label::before {
   border-radius: 2px;
   outline: none;
   cursor: pointer;
+}
+.price input[type="submit"]:hover {
+  background: #ffffff;
+  color: #000000;
 }
 .found {
   display: -webkit-box;
