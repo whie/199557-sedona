@@ -202,6 +202,8 @@ li.logo {
   margin-bottom: 10px;
 }
 .benefits-text p {
+  max-width: 303px;
+  width: 100%;
 }
 .benefits:nth-of-type(2n+1) .benefits-text {
   padding-top: 26px;
