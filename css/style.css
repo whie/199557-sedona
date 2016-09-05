@@ -112,6 +112,9 @@ li.logo {
   text-align: center;
   z-index: 10;
 }
+.logo a:active {
+  opacity: 1;
+}
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -805,9 +808,12 @@ input[type="checkbox"]:disabled:checked + label::before {
  font-size: 12px;
  line-height: 18px;
 }
-.menu-sort .active-point {
+.menu-sort .active-point,
+.menu-sort .active-point:hover,
+.menu-sort .active-point:active {
   border: none;
   color: #81b3d2;
+  opacity: 1;
 }
 .menu-sort a {
   border-bottom: 1px dotted #81b3d2;
@@ -845,7 +851,9 @@ a[class^="sorting-"]:hover {
 a[class^="sorting-"]:active {
   border-bottom: 10px solid #81b3d2;
 }
-a.arrow-active {
+a.arrow-active,
+a.arrow-active:hover,
+a.arrow-active:active {
   border-bottom: 10px solid #81b3d2;
 }
 .card-description {
