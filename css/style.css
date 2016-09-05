@@ -178,6 +178,8 @@ li.logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -199,7 +201,8 @@ li.logo {
   max-width: 151px;
   margin-bottom: 10px;
 }
-
+.benefits-text p {
+}
 .benefits:nth-of-type(2n+1) .benefits-text {
   padding-top: 26px;
   min-height: 256px;
@@ -352,7 +355,6 @@ li.logo {
   -ms-flex-item-align: center;
       align-self: center;
 }
-
 .calendar {
   position: absolute;
   top: 6px;
@@ -584,8 +586,17 @@ display: flex;
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.infrastructure,
+.housing {
+  min-width: 204px;
+}
+.price {
+  max-width: 328px;
+  width: 100%;
+  min-width: 232px;
+}
 .infrastructure {
-  margin-right: 11%;
+  margin-right: 4.6%;
 }
 .infrastructure div,
 .housing div {
@@ -635,9 +646,18 @@ input[type="checkbox"]:disabled + label::before {
           flex-grow: 2;
 }
 .selecting-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
   height: 32px;
   margin-bottom: 20px;
+  margin-left: 10px;
+  padding-left: 20%;
+  padding-right: 2%;
   font-size: 0;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -662,11 +682,11 @@ input[type="checkbox"]:disabled + label::before {
 }
 .selecting-price .min-price,
 .selecting-price .max-price {
-  width: 90px;
-  padding-left: 65px;
+  width: 40%;
+
 }
 .selecting-price input {
-  width: 50px;
+  width: 33px;
   margin: 0;
   min-height: 20px;
   color: inherit;
@@ -677,6 +697,7 @@ input[type="checkbox"]:disabled + label::before {
 }
 .range-controls {
   position: relative;
+  margin-left: 10px;
   margin-bottom: 32px;
 }
 .range-controls .scale {
@@ -733,7 +754,7 @@ input[type="checkbox"]:disabled + label::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 9px;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 .found-column-left {
@@ -888,6 +909,8 @@ a.arrow-active {
   margin-right: 5px;
 }
 .rating {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   text-align: right;
 }
 .rating .rating-star {
@@ -896,7 +919,7 @@ a.arrow-active {
   width: 90px;
   height: 17px;
   background: url("../img/sprite.png") no-repeat;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 .rating-star.four-star {
   background-position: -80px -266px;
@@ -908,7 +931,6 @@ a.arrow-active {
   background-position: -57px -266px;
 }
 .rating p {
-  margin-top: 15px;
   margin-bottom: 0;
   padding: 4px 12px 3px 16px;
   color: #666666;
